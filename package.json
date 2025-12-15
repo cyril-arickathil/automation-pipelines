@@ -1,0 +1,32 @@
+{
+  "name": "test-automation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "ui": "npx playwright test --ui",
+    "test": "npx playwright test",
+    "retry-failed": "npx playwright test --retries=3",
+    "pageobject-chrome": "npx playwright test usingPOM.spec.ts --project=chromium",
+    "pageobject-dev": "npx playwright test usingPOM.spec.ts --project=dev",
+    "pageobject-local": "npx playwright test usingPOM.spec.ts --project=local",
+    "smoke-tests": "npx playwright test --grep @smoke --project=chromium",
+    "ui-components-test": "npx playwright test tests/uiComponents.spec.ts --project=chromium",
+    "api-tests": "npx playwright test tests/api/login.test.ts",
+    "codegen": "npx playwright codegen",
+    "allure-generate-report": "allure generate ./allure-results -o ./allure-report",
+    "allure-open": "allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@estruyf/github-actions-reporter": "^1.10.0",
+    "@faker-js/faker": "^10.1.0",
+    "@playwright/test": "^1.56.1",
+    "@types/node": "^24.10.0",
+    "allure-playwright": "^3.4.3",
+    "dotenv": "^17.2.3"
+  }
+}
