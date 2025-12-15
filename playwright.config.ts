@@ -12,6 +12,7 @@ import type {TestOptions} from './testOptions';
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
+
 export default defineConfig<TestOptions>({
 
   timeout: 40*1000,
